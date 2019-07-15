@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+    jenkins:
+        build: .
+        image: stadler/jenkins-org-plus-docker:latest
+        env_file:
+            - jenkins.env
+        volumes:
+            - ./config.yml:/var/jenkins_casc.yml
+        ports:
+            - "8080:8080"
+        environment:
+            DOCKER_TLS_VERIFY: 1
+            DOCKER_HOST: "tcp://localhost:2376"
+        secrets:
+            - docker-ca.pem
+            - docker-cert.pem
+            - docker-key.pem
+            
+secrets:
+  docker-ca.pem:
+    file: "~/.docker/ca.pem"
+  docker-cert.pem:
+    file: "~/.docker/cert.pem"
+  docker-key.pem:
+    file: "~/.docker/key.pem"

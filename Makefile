@@ -1,5 +1,5 @@
 ROOT_DIR="$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))/"
-
+SHELL := /bin/bash
 
 all: build
 
@@ -7,7 +7,11 @@ all: build
 build: build-server
 
 build-server:
-	docker build --file jenkins-server/Dockerfile .
+	pushd jenkins-server; \
+	docker build --file Dockerfile . ; \
+	popd 
 
 run-server:
-	docker-compose up 
+	pushd jenkins-server; \
+	docker-compose up; \
+	popd
