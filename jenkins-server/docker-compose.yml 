@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+   db:
+     image: mysql:latest
+     volumes:
+       - db_data:/var/lib/mysql
+     environment:
+        DOCKER_TLS_VERIFY=1
+        DOCKER_HOST="tcp://$(hostname):2376"
+       
+     secrets:
+        - docker-ca.pem
+        - docker-cert.pem
+        - docker-key.pem
+        - source=docker-ca.pem,target=/etc/nginx/conf.d/site.conf
+        
+
+secrets:
+    docker-ca.pem:
+        file: ~/.docker/ca.pem
+    docker-cert.pem
+        file:~/.docker/cert.pem
+    docker-key.pem
+        file:~/.docker/key.pem
