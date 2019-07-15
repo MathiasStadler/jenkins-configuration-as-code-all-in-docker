@@ -27,3 +27,8 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 # ensure that our plugin versions win, not those on disk
 RUN for f in /usr/share/jenkins/ref/plugins/*.jpi; do mv $f $f.override ; done
 
+user root
+
+RUN mkdir -pv /var/jenkins_home/.docker
+
+user jenkins

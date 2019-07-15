@@ -1,7 +1,7 @@
 ROOT_DIR="$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))/"
 SHELL := /bin/bash
 
-all: build
+all:
 
 
 build: build-server
@@ -15,3 +15,14 @@ run-server:
 	pushd jenkins-server; \
 	docker-compose up; \
 	popd
+
+down-server:
+	pushd jenkins-server; \
+	docker-compose down; \
+	popd
+
+bash-server:
+	pushd jenkins-server; \
+	docker-compose ps -q jenkins >/tmp/jenkins-server-container-id.txt; \
+	cat /tmp/jenkins-server-container-id.txt | xargs -I {} docker exec -i {} /bin/bash; \
+	popd	

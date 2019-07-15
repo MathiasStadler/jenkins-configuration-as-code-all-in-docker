@@ -3,6 +3,8 @@ services:
     jenkins:
         build: .
         image: stadler/jenkins-org-plus-docker:latest
+        tty: true
+        stdin_open: true
         env_file:
             - jenkins.env
         volumes:
@@ -14,9 +16,8 @@ services:
             DOCKER_HOST: "tcp://localhost:2376"
         secrets:
             - docker-ca.pem
-            - docker-cert.pem
-            - docker-key.pem
             
+
 secrets:
   docker-ca.pem:
     file: "~/.docker/ca.pem"
