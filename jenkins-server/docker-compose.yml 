@@ -8,13 +8,11 @@ services:
      environment:
         DOCKER_TLS_VERIFY=1
         DOCKER_HOST="tcp://$(hostname):2376"
-       
+
      secrets:
         - docker-ca.pem
         - docker-cert.pem
         - docker-key.pem
-        - source=docker-ca.pem,target=/etc/nginx/conf.d/site.conf
-        
 
 secrets:
     docker-ca.pem:
