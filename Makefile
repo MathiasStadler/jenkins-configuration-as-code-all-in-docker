@@ -6,22 +6,22 @@ all:
 
 build: build-server
 
-build-server:
+build-service:
 	pushd jenkins-server; \
 	docker build --file Dockerfile . ; \
 	popd 
 
-run-server:
+run-service:
 	pushd jenkins-server; \
 	docker-compose up; \
 	popd
 
-down-server:
+down-service:
 	pushd jenkins-server; \
 	docker-compose down; \
 	popd
 
-bash-server:
+bash-service:
 	pushd jenkins-server; \
 	docker-compose ps -q jenkins >/tmp/jenkins-server-container-id.txt; \
 	popd ; \
