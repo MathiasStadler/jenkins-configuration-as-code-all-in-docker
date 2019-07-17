@@ -16,6 +16,8 @@ services:
             DOCKER_HOST: "tcp://localhost:2376"
         secrets:
             - docker-ca.pem
+            - docker-cert.pem
+            - docker-key.pem
             
 
 secrets:
