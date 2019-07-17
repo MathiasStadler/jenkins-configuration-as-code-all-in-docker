@@ -8,8 +8,9 @@ build: build-server
 
 build-service:
 	pushd jenkins-server; \
-	docker build --file Dockerfile . ; \
-	popd 
+	docker-compose build; \
+	popd:
+	down-service
 
 run-service:
 	pushd jenkins-server; \
@@ -37,3 +38,16 @@ status-service:
 	pushd jenkins-server; \
 	./get-compose-service-status.sh; \
 	popd; 
+
+list-container:
+	jenkins-server/get-compose-project-name.sh; \
+	pushd jenkins-server; \
+	docker-compose ps; \
+	popd
+
+rountrib-develop:
+	make down-service
+	make build-service
+	make run-service
+	
+	

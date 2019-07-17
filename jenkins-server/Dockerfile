@@ -27,8 +27,8 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 # ensure that our plugin versions win, not those on disk
 RUN for f in /usr/share/jenkins/ref/plugins/*.jpi; do mv $f $f.override ; done
 
-user root
 
-RUN mkdir -pv /var/jenkins_home/.docker
+COPY setup-tls-docker.sh /var/jenkins_home
 
-user jenkins
+RUN chmod -x /var/jenkins_home/setup-tls-docker.sh
+

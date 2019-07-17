@@ -1,7 +1,9 @@
 version: '3.4'
 services:
     jenkins:
-        build: .
+        build: 
+          context: .
+          dockerfile: Dockerfile
         image: stadler/jenkins-org-plus-docker:latest
         tty: true
         stdin_open: true
@@ -18,7 +20,7 @@ services:
             - docker-ca.pem
             - docker-cert.pem
             - docker-key.pem
-            
+           
 
 secrets:
   docker-ca.pem:
