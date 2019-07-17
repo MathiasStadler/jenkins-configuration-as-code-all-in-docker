@@ -18,7 +18,7 @@ run-service:
 
 down-service:
 	pushd jenkins-server; \
-	docker-compose down --detach; \
+	docker-compose down; \
 	popd
 
 bash-service:
@@ -26,3 +26,9 @@ bash-service:
 	docker-compose ps -q jenkins >/tmp/jenkins-server-container-id.txt; \
 	popd ; \
 	jenkins-server/bash-server.sh	
+
+list-service:
+	jenkins-server/get-compose-project-name.sh; \
+	pushd jenkins-server; \
+	docker-compose ps --services; \
+	popd
