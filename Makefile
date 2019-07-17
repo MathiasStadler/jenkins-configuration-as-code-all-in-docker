@@ -32,3 +32,8 @@ list-service:
 	pushd jenkins-server; \
 	docker-compose ps --services; \
 	popd
+
+status-service:
+	pushd jenkins-server; \
+	./get-compose-service-status.sh; \
+	popd; 
