@@ -13,12 +13,12 @@ build-service:
 
 run-service:
 	pushd jenkins-server; \
-	docker-compose up; \
+	docker-compose up --detach; \
 	popd
 
 down-service:
 	pushd jenkins-server; \
-	docker-compose down; \
+	docker-compose down --detach; \
 	popd
 
 bash-service:
