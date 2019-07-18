@@ -34,7 +34,7 @@ build: build-server
 build-service:
 	pushd jenkins-server; \
 	docker-compose build; \
-	popd;
+	popd || (echo "mycommand failed $$?"; exit 1)
 	
 
 run-service:
@@ -71,9 +71,9 @@ list-container:
 	popd
 
 rountrib-develop:
-	make down-service
-	make build-service
-	make run-service
-	make bash-service
+	make down-service build-service run-service bash-service
+	# make build-service
+	# make run-service
+	# make bash-service
 	
 	

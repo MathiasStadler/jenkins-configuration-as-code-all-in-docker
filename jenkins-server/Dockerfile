@@ -35,6 +35,9 @@ COPY entrypoint.sh /entrypoint.sh
 COPY security.groovy /usr/share/jenkins/ref/init.groovy.d/
 COPY local.groovy /usr/share/jenkins/ref/init.groovy.d/
 
+#ENV CASC_JENKINS_CONFIG=/usr/share/jenkins/casc_configs
+#COPY config.yaml /usr/share/jenkins/casc_configs/
+
 # RUN ["chmod", "+x", "/setup-tls-docker.sh"]
 
 ENTRYPOINT ["bash","+x","/entrypoint.sh"] 
