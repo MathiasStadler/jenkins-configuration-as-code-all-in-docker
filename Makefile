@@ -1,6 +1,15 @@
 ROOT_DIR="$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))/"
 SHELL := /bin/bash
 
+# check shecl variables
+ifeq ($(DOCKER_HOST_IP),)
+$(info variable DCKER_HOST_IP not set!)
+$(info please set variable DOCKER_HOST_IP by hand or run)
+$(info . ./set-docker-host-ip.sh)
+exit
+endif
+
+
 all:
 
 

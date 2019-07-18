@@ -33,6 +33,11 @@ else
 
 fi
 
+# set docker host_ip
+
+# export HOST_IP="$(ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q')";
+
+
 
 make build-service
 make run-service
