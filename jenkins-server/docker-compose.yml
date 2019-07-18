@@ -17,7 +17,7 @@ services:
             - DOCKER_HOST_IP="${DOCKER_HOST_IP}"
             - DOCKER_HOST_PORT=${DOCKER_HOST_PORT}"
             - DOCKER_HOST=tcp://${DOCKER_HOST_IP}:${DOCKER_HOST_PORT}
-        command: bash +x /setup-tls-docker.sh
+        
         secrets:
             - docker-ca.pem
             - docker-cert.pem

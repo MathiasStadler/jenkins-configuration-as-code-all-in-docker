@@ -18,7 +18,8 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
 user jenkins
 
 # skip the setup wizard
-ENV JAVA_ARGS -Djenkins.install.runSetupWizard=false -Dpermissive-script-security.enabled=true
+# ENV JAVA_ARGS -Djenkins.install.runSetupWizard=false -Dpermissive-script-security.enabled=true
+ENV JAVA_ARGS -Djenkins.install.runSetupWizard=false
 
 # install plugins
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt

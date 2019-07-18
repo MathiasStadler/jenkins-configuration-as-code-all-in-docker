@@ -2,6 +2,8 @@
 
 set -o errexit -o posix
 
+echo $JAVA_ARGS >/tmp/java-args.txt
+
 # setup tls for docker
 bash +x /setup-tls-docker.sh
 # start jenkins 
