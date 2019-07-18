@@ -1,4 +1,4 @@
-#!/bin/bsh
+#!/bin/bash
 set -o errexit -o posix
 
 if ! [ -d "/var/jenkins_home/.docker" ]; then
@@ -9,4 +9,3 @@ ln -s /run/secrets/docker-ca.pem /var/jenkins_home/.docker/ca.pem
 ln -s /run/secrets/docker-cert.pem /var/jenkins_home/.docker/cert.pem
 ln -s /run/secrets/docker-key.pem /var/jenkins_home/.docker/key.pem
 
-/sbin/tini -- /usr/local/bin/jenkins.sh

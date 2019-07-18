@@ -1,11 +1,27 @@
 ROOT_DIR="$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))/"
 SHELL := /bin/bash
 
-# check shecl variables
+# check shell variables
 ifeq ($(DOCKER_HOST_IP),)
 $(info variable DCKER_HOST_IP not set!)
 $(info please set variable DOCKER_HOST_IP by hand or run)
 $(info . ./set-docker-host-ip.sh)
+exit
+endif
+
+# check shell variables
+ifeq ($(DOCKER_HOST_PORT),)
+$(info variable DOCKER_HOST_PORT not set!)
+$(info please set variable DOCKER_HOST_PORT by hand or run)
+$(info . ./set-docker-host-ip.sh)
+exit
+endif
+
+# check shell variables
+ifeq ($(COMPOSE_PROJECT_NAME),)
+$(info variable COMPOSE_PROJECT_NAME not set!)
+$(info please set variable COMPOSE_PROJECT_NAME by hand or run)
+$(info ./start-jenkins.sh for help)
 exit
 endif
 
