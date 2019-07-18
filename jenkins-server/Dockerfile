@@ -28,7 +28,12 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 RUN for f in /usr/share/jenkins/ref/plugins/*.jpi; do mv $f $f.override ; done
 
 
-COPY setup-tls-docker.sh /var/jenkins_home
+COPY --chown=jenkins:jenkins setup-tls-docker.sh /var/jenkins_home/setup-tls-docker.sh
 
-RUN chmod -x /var/jenkins_home/setup-tls-docker.sh
+USER root
+RUN bash +x /var/jenkins_home/setup-tls-docker.sh
+
+RUN echo "finished" >/tmp/finished.txt
+
+USER jenkins
 

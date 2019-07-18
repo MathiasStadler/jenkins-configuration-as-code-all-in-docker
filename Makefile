@@ -9,8 +9,8 @@ build: build-server
 build-service:
 	pushd jenkins-server; \
 	docker-compose build; \
-	popd:
-	down-service
+	popd;
+	
 
 run-service:
 	pushd jenkins-server; \
@@ -49,5 +49,6 @@ rountrib-develop:
 	make down-service
 	make build-service
 	make run-service
+	make bash-service
 	
 	
