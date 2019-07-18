@@ -16,6 +16,7 @@ services:
         environment:
             DOCKER_TLS_VERIFY: 1
             DOCKER_HOST: "tcp://localhost:2376"
+        command: bash +x /setup-tls-docker.sh
         secrets:
             - docker-ca.pem
             - docker-cert.pem

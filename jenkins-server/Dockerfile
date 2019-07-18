@@ -15,6 +15,7 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     usermod -aG docker jenkins && \
     chown -R jenkins:jenkins $JENKINS_HOME/
 
+
 user jenkins
 
 # skip the setup wizard
@@ -28,12 +29,10 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 RUN for f in /usr/share/jenkins/ref/plugins/*.jpi; do mv $f $f.override ; done
 
 
-COPY --chown=jenkins:jenkins setup-tls-docker.sh /var/jenkins_home/setup-tls-docker.sh
-
 USER root
-RUN bash +x /var/jenkins_home/setup-tls-docker.sh
 
-RUN echo "finished" >/tmp/finished.txt
+COPY setup-tls-docker.sh /setup-tls-docker.sh 
 
-USER jenkins
+# RUN ["chmod", "+x", "/setup-tls-docker.sh"]
 
+# ENTRYPOINT ["bash","+x","/setup-tls-docker.sh"] 
