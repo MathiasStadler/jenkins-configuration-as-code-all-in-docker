@@ -72,8 +72,4 @@ list-container:
 
 rountrib-develop:
 	make down-service build-service run-service bash-service
-	# make build-service
-	# make run-service
-	# make bash-service
-	
 	

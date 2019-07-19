@@ -1,25 +1,60 @@
-# pipeline-utility-steps:2.3.0
-# prometheus:2.0.0
-# saml:1.1.2
-# ssh-agent:1.17
-# slack:2.27
-# timestamper:1.9
-# workflow-aggregator:2.6
-# ansible:1.0
-# permissive-script-security:0.5
-# docker-plugin:1.1.7
-
-# simple-theme-plugin:latest
-# cloudbees-folder:latest
-# configuration-as-code:latest
-# configuration-as-code-support:latest
-
-# simple-theme-plugin:latest
-# cloudbees-folder:latest
-configuration-as-code:latest
-configuration-as-code-support:latest
-credentials-binding:latest
-credentials:latest
-job-dsl:latest
-# git:latest
-github:latest
+apache-httpcomponents-client-4-api
+configuration-as-code-support
+configuration-as-code
+credentials-binding
+credentials
+display-url-api
+git-client
+git
+github-api
+github
+jackson2-api
+job-dsl
+jsch
+junit
+mailer
+matrix-project
+plain-credentials
+scm-api
+script-security
+ssh-credentials
+structs
+token-macro
+workflow-api
+workflow-scm-step
+workflow-step-api
+jdk-tool
+command-launcher
+bouncycastle-api
+pipeline-milestone-step
+jquery-detached
+ace-editor
+workflow-support
+workflow-cps
+pipeline-input-step
+pipeline-stage-step
+workflow-job
+pipeline-graph-analysis
+pipeline-rest-api
+handlebars
+momentjs
+pipeline-stage-view
+pipeline-build-step
+pipeline-model-api
+pipeline-model-extensions
+cloudbees-folder
+git-server
+workflow-cps-global-lib
+branch-api
+workflow-multibranch
+authentication-tokens
+docker-commons
+durable-task
+workflow-durable-task-step
+workflow-basic-steps
+docker-workflow
+pipeline-stage-tags-metadata
+pipeline-model-declarative-agent
+pipeline-model-definition
+lockable-resources
+workflow-aggregator

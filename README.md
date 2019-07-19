@@ -2,6 +2,12 @@
 
 a jenkins docker container config by casc ( config-as-code) and run all test inside slave container at remote  docker swarm environment
 
+## sources
+
+```txt
+https://fishi.devtail.io/weblog/2019/01/06/jenkins-as-code-part-1/
+```
+
 ## tl;dr
 
 - check out these repo
