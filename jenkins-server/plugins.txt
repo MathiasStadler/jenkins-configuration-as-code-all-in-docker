@@ -1,22 +1,25 @@
-pipeline-utility-steps:2.3.0
-prometheus:2.0.0
-saml:1.1.2
-ssh-agent:1.17
-slack:2.27
-timestamper:1.9
-workflow-aggregator:2.6
-ansible:1.0
-permissive-script-security:0.5
-docker-plugin:1.1.7
+# pipeline-utility-steps:2.3.0
+# prometheus:2.0.0
+# saml:1.1.2
+# ssh-agent:1.17
+# slack:2.27
+# timestamper:1.9
+# workflow-aggregator:2.6
+# ansible:1.0
+# permissive-script-security:0.5
+# docker-plugin:1.1.7
 
 # simple-theme-plugin:latest
 # cloudbees-folder:latest
 # configuration-as-code:latest
 # configuration-as-code-support:latest
 
-simple-theme-plugin:latest
-cloudbees-folder:latest
+# simple-theme-plugin:latest
+# cloudbees-folder:latest
 configuration-as-code:latest
 configuration-as-code-support:latest
+credentials-binding:latest
+credentials:latest
 job-dsl:latest
-git:latest
+# git:latest
+github:latest

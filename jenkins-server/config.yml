@@ -8,12 +8,6 @@ jenkins:
 unclassified:
   location:
     url: "${JENKINS_HOST}"
-  slackNotifier:
-    baseUrl: "${SLACK_URL}"
-    tokenCredentialId: "slack-token"
-security:
-  globalJobDslSecurityConfiguration:
-    useScriptSecurity: false
 credentials:
   system:
     domainCredentials:

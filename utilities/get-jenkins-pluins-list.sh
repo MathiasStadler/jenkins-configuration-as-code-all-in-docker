@@ -4,8 +4,6 @@
 
 set -o errexit -o posix
 
-echo "start"
-
 jq --version >/dev/null 2>/dev/null || { printf "jq needed, install first\n"; exit 1; }
 curl --version >/dev/null 2>/dev/null || { printf "curl needed, install first\n"; exit 1;}
 
