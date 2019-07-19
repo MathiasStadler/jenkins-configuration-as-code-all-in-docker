@@ -6,6 +6,10 @@ a jenkins docker container config by casc ( config-as-code) and run all test ins
 
 ```txt
 https://fishi.devtail.io/weblog/2019/01/06/jenkins-as-code-part-1/
+https://jenkins.io/blog/2018/04/25/configuring-jenkins-pipeline-with-yaml-file/
+https://jenkinsci.github.io/job-dsl-plugin/#method/javaposse.jobdsl.dsl.helpers.workflow.WorkflowDefinitionContext.cpsScm
+# pre approval groovy script
+https://stackoverflow.com/questions/43699190/seed-job-asks-for-script-approval-in-jenkins
 ```
 
 ## tl;dr

@@ -34,23 +34,23 @@ build: build-server
 build-service:
 	pushd jenkins-server; \
 	docker-compose build; \
-	popd || (echo "mycommand failed $$?"; exit 1)
+	popd || ( printf "mycommand failed $$?"; exit 1; )
 	
 
 run-service:
 	pushd jenkins-server; \
 	docker-compose up --detach; \
-	popd
+	popd || ( printf "mycommand failed $$?"; exit 1;)
 
 down-service:
 	pushd jenkins-server; \
 	docker-compose down; \
-	popd
+	popd || ( printf "mycommand failed $$?"; exit 1;)
 
 bash-service:
 	pushd jenkins-server; \
 	docker-compose ps -q jenkins >/tmp/jenkins-server-container-id.txt; \
-	popd ; \
+	popd || ( printf "mycommand failed $$?"; exit 1; ) ; \
 	jenkins-server/bash-server.sh	
 
 list-service:

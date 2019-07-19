@@ -8,6 +8,9 @@ jenkins:
 unclassified:
   location:
     url: "${JENKINS_HOST}"
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
 credentials:
   system:
     domainCredentials:
@@ -24,14 +27,14 @@ credentials:
               secret: "${SLACK_TOKEN}"
 jobs:
   - script: >
-      freeStyleJob('seedjob') {
-          displayName('Seedjob')
-          description('Create Jobs from this seedjob')
+      freeStyleJob('dsl-project-test') {
+          displayName('dsl-project-test')
+          description('Create Jobs/Pipeline from this dsl-project-test.yaml')
 
           scm {
               git {
                   remote {
-                      github('${GITHUB_REPO_JOB_DSL}')
+                      github('${GITHUB_REPO_JOB_DSL}','https')
                       
                   }
               }
@@ -40,7 +43,7 @@ jobs:
           steps {
               dsl {
                   removeAction('DISABLE')
-                  external('seed_jobdsl.groovy')
+                  external('pipeline_config.groovy')
               }
           }
       }
