@@ -38,7 +38,7 @@ jobs:
               git {
                   remote {
                       github('${GITHUB_REPO_JOB_DSL}')
-                      credentials('github-token')
+                      
                   }
               }
           }
