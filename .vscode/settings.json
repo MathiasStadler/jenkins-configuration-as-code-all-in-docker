@@ -1,7 +1,13 @@
 {
     "cSpell.words": [
+        "CRUMBURL",
+        "PASSWD",
         "casc",
+        "chmod",
+        "chown",
+        "concat",
         "errexit",
+        "mkdir",
         "posix",
         "printf"
     ]

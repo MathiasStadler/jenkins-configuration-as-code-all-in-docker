@@ -43,7 +43,7 @@ jobs:
           steps {
               dsl {
                   removeAction('DISABLE')
-                  external('pipeline_config.groovy')
+                  external('JENKINSFILE')
               }
           }
       }
