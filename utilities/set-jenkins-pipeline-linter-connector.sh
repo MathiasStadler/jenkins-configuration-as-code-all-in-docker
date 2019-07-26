@@ -42,15 +42,31 @@ sudo chmod -R 0400 "${JENKINS_VALIDATE}"
 #  prepare project .vscode.settings.json
 if [ -e .vscode ]; then
 
-    echo "check is jenkins validator setting inside"
-    if [ validator inside ]; then
-        echo "ok"
+    if [ -e .vscode/settings.json ]; then
+        echo "check is jenkins validator setting inside"
+        if grep jenkins.pipeline.linter.connector.url .vscode/settings.json; then
+            echo "ok"
+        else
+            echo "add to json file"
+            TEMP_FILE=$(mktemp)
+
+            cat <<EOF >"${TEMP_FILE}"
+{
+"jenkins.pipeline.linter.connector.crumbUrl":"${JENKINS_PIPELINE_LINTER_CONNECTOR_CRUMBURL}",
+"jenkins.pipeline.linter.connector.url":"${JENKINS_PIPELINE_LINTER_CONNECTOR_URL}",
+"jenkins.pipeline.linter.connector.user":"${JENKINS_PIPELINE_LINTER_CONNECTOR_USER}",
+"jenkins.pipeline.linter.connector.pass":"${JENKINS_PIPELINE_LINTER_CONNECTOR_PASS}"
+}
+EOF
+            cp .vscode/settings.json .vscode/settings.json_save_"$(date "+%Y%m%d")"
+            jq add "${TEMP_FILE}" ".vscode/settings.json"
+            # rm "${TEMP_FILE}"
+        fi
     else
-        echo "add"
+        printf "ERROR::No setting.json found "
     fi
 else
 
-     
     printf "ERROR: Please call the script from project home folder \n"
-    printf " this folder %s not contains .vscode\n" "${0%/*}";
+    printf " this folder %s not contains .vscode\n" "${0%/*}"
 fi
