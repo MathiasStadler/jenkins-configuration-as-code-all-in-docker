@@ -17,7 +17,7 @@ JENKINS_HOST_PROTOCOL="${JENKINS_HOST_PROTOCOL:-http}"
 # Assuming "anonymous read access" has been enabled on your Jenkins instance.
 JENKINS_URL="${JENKINS_HOST_PROTOCOL}://${JENKINS_USER}:${JENKINS_PASSWD}@${JENKINS_HOST_NAME}:${JENKINS_HOST_PORT}"
 # JENKINS_CRUMB is needed if your Jenkins master has CRSF protection enabled as it should
-JENKINS_PIPELINE_LINTER_CONNECTOR_CRUMBURL="${JENKINS_URL}/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)"
+JENKINS_PIPELINE_LINTER_CONNECTOR_CRUMBURL="${JENKINS_URL}/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,%22:%22,//crumb)"
 JENKINS_PIPELINE_LINTER_CONNECTOR_URL="${JENKINS_URL}/pipeline-model-converter/validate"
 JENKINS_PIPELINE_LINTER_CONNECTOR_USER="${JENKINS_USER}"
 JENKINS_PIPELINE_LINTER_CONNECTOR_PASS="${JENKINS_PASSWD}"
@@ -58,9 +58,12 @@ if [ -e .vscode ]; then
 "jenkins.pipeline.linter.connector.pass":"${JENKINS_PIPELINE_LINTER_CONNECTOR_PASS}"
 }
 EOF
-            cp .vscode/settings.json .vscode/settings.json_save_"$(date "+%Y%m%d")"
-            jq add "${TEMP_FILE}" ".vscode/settings.json"
-            # rm "${TEMP_FILE}"
+            readonly DATE_STRING=$(date +"%Y-%m-%d-%H-%M-%S")
+            readonly SETTINGS_JSON=".vscode/settings.json";
+            readonly SETTINGS_JSON_BACKUP="${SETTINGS_JSON}_${DATE_STRING}"; 
+            cp "${SETTINGS_JSON}" "${SETTINGS_JSON_BACKUP}";
+            cat "${TEMP_FILE}" "${SETTINGS_JSON_BACKUP}" | jq -s add >"${SETTINGS_JSON}"
+            # TODO rm "${TEMP_FILE}"
         fi
     else
         printf "ERROR::No setting.json found "

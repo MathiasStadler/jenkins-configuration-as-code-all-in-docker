@@ -1,15 +1,23 @@
 {
-    "cSpell.words": [
-        "CRUMBURL",
-        "PASSWD",
-        "casc",
-        "chmod",
-        "chown",
-        "concat",
-        "errexit",
-        "mkdir",
-        "mktemp",
-        "posix",
-        "printf"
-    ]
+  "jenkins.pipeline.linter.connector.crumbUrl": "http://admin:admin@localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,%22:%22,//crumb)",
+  "jenkins.pipeline.linter.connector.url": "http://admin:admin@localhost:8080/pipeline-model-converter/validate",
+  "jenkins.pipeline.linter.connector.user": "admin",
+  "jenkins.pipeline.linter.connector.pass": "admin",
+  "cSpell.words": [
+    "CRSF",
+    "CRUMBURL",
+    "PASSWD",
+    "casc",
+    "chmod",
+    "chown",
+    "concat",
+    "errexit",
+    "mkdir",
+    "mktemp",
+    "nounset",
+    "pipefail",
+    "posix",
+    "printf",
+    "readonly"
+  ]
 }
