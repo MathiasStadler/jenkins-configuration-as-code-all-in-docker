@@ -13,9 +13,9 @@ github_url=$(git config --get remote.origin.url)
 regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
 
 if [[ $github_url =~ $regex ]]; then    
-    protocol=${BASH_REMATCH[1]}
-    separator=${BASH_REMATCH[2]}
-    hostname=${BASH_REMATCH[3]}
+    # protocol=${BASH_REMATCH[1]}
+    # separator=${BASH_REMATCH[2]}
+    # hostname=${BASH_REMATCH[3]}
     user=${BASH_REMATCH[4]}
     repository=${BASH_REMATCH[5]}
 fi
