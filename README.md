@@ -14,7 +14,7 @@ https://stackoverflow.com/questions/43699190/seed-job-asks-for-script-approval-i
 
 ## tl;dr
 
-- check out these repo
+- check out these repository
 - run start-jenkins.sh and follow up that instruction
 
 ## version tags
@@ -27,3 +27,14 @@ https://stackoverflow.com/questions/43699190/seed-job-asks-for-script-approval-i
 [x] handle by docker-compose
 [x] Security: No export docker socket to conatiner
 [x] Security: Container not run in under privileged mode
+
+- v0.0.2
+[ ] add to git project as git sub module
+[ ] execute the JENKINSFILE from parant directory
+[ ] set DOCKER_COMPOSER_NAME equal git project name
+[ ] run many isolate jenkins container
+[ ] set auto port for jenkins
+[ ] enable strong https on each server
+
+- v0.0.3
+[ ] start slave jenkins server in docker
