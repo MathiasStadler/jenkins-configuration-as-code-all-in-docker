@@ -1,8 +1,5 @@
 #!/bin/bash
-
 set -o errexit -o posix -o nounset
-
-echo "${JAVA_ARGS}" >/tmp/java-args.txt
 
 # setup tls for docker
 bash +x /setup-tls-docker.sh
