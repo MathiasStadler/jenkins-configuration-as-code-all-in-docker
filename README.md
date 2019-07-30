@@ -1,6 +1,6 @@
 # jenkins-configuration-as-code-all-in-docker
 
-a jenkins docker container config by casc ( config-as-code) and run all test inside slave container at remote docke swarm environment
+a jenkins docker container config by casc ( config-as-code) and run all test inside slave container at remote docker swarm environment
 
 ## sources
 
@@ -21,16 +21,16 @@ https://stackoverflow.com/questions/43699190/seed-job-asks-for-script-approval-i
 
 - v0.0.1
 - [x] start/stop Jenkins container trigger by make
-- [x] remote access to docker socket via tls 
+- [x] remote access to docker socket via tls
 - [x] inline docker key per secret inside the remote container
-- [x] config casc to git checkout project.dsl from poroject
+- [x] config casc to git checkout project.dsl from project
 - [x] handle by docker-compose
-- [x] Security: No export docker socket to conatiner
+- [x] Security: No export docker socket to container
 - [x] Security: Container not run in under privileged mode
 
 - v0.0.2
 - [ ] add to git project as git sub module
-- [ ] execute the JENKINSFILE from parant directory
+- [ ] execute the JENKINSFILE from parent directory
 - [ ] set DOCKER_COMPOSER_NAME equal git project name
 - [ ] run many isolate jenkins container
 - [ ] set auto port for jenkins

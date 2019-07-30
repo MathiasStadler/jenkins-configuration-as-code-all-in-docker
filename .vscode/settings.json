@@ -25,6 +25,8 @@
     "printf",
     "pushd",
     "readonly",
-    "realpath"
+    "realpath",
+    "sbin",
+    "tini"
   ]
 }
