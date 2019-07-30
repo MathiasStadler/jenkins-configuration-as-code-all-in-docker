@@ -2,7 +2,8 @@
 
 # usage:
 # . ./set-host-ip.sh
-export DOCKER_HOST_IP="$(ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q')";
-
+DOCKER_HOST_IP="$(ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q')";
+export DOCKER_HOST_IP;
 # pseudo docker default port
-export DOCKER_HOST_PORT=2376
+DOCKER_HOST_PORT=2376
+export DOCKER_HOST_PORT
