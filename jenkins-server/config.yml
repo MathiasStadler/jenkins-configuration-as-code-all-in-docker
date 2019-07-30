@@ -27,14 +27,14 @@ credentials:
               secret: "${SLACK_TOKEN}"
 jobs:
   - script: >
-      freeStyleJob('dsl-project-test') {
-          displayName('dsl-project-test')
-          description('Create Jobs/Pipeline from this dsl-project-test.yaml')
+      freeStyleJob('${GITHUB_REPOSITORY}') {
+          displayName(${GITHUB_REPOSITORY})
+          description('Create Jobs/Pipeline from the JENKINSFILE')
 
           scm {
               git {
                   remote {
-                      github('${GITHUB_REPO_JOB_DSL}','https')
+                      github('${GITHUB_REPOSITORY}','https')
                       
                   }
               }

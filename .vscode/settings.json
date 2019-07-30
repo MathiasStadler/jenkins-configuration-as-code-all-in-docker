@@ -7,6 +7,7 @@
     "CRSF",
     "CRUMBURL",
     "PASSWD",
+    "SAML",
     "casc",
     "chmod",
     "chown",
@@ -26,7 +27,9 @@
     "pushd",
     "readonly",
     "realpath",
+    "remoting",
     "sbin",
+    "stadler",
     "tini"
   ]
 }
