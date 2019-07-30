@@ -1,10 +1,9 @@
 #!/bin/bash -l
-set -o errexit -o posix -o unset -o pipefail
+set -o errexit -o posix -o nounset -o pipefail
 
 # check is set
 
 if [ -z "$COMPOSE_PROJECT_NAME" ]; then
-
     printf "# Oops !!! Variable \$COMPOSE_PROJECT_NAME NOT set yet\n"
     printf "# Please set first for isolated\n"
     # check is provide as parameter
@@ -29,18 +28,7 @@ else
         printf "unset COMPOSE_PROJECT_NAME"
         exit 1
     fi
-
 fi
-
-# set docker host_ip
-
-# export HOST_IP="$(ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q')";
-
-
 
 make build-service
 make run-service
-
-# TODO IP
-# TODO port
-echo "open jenkins on ip:port"

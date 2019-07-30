@@ -12,12 +12,17 @@
     "chown",
     "concat",
     "errexit",
+    "ifeq",
+    "lastword",
     "mkdir",
     "mktemp",
     "nounset",
     "pipefail",
+    "popd",
     "posix",
     "printf",
-    "readonly"
+    "pushd",
+    "readonly",
+    "realpath"
   ]
 }
