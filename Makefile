@@ -5,7 +5,7 @@ SHELL := /bin/bash
 ifeq ($(DOCKER_HOST_IP),)
 $(info variable DOCKER_HOST_IP not set!)
 $(info please set variable DOCKER_HOST_IP by hand or run)
-$(info . ./set-docker-host-ip.sh)
+$(info . ./set-variables-jenkins-localhost.sh)
 exit
 endif
 
@@ -13,7 +13,7 @@ endif
 ifeq ($(DOCKER_HOST_PORT),)
 $(info variable DOCKER_HOST_PORT not set!)
 $(info please set variable DOCKER_HOST_PORT by hand or run)
-$(info . ./import-variables-jenkins-localhost.sh)
+$(info . ./set-variables-jenkins-localhost.sh)
 exit
 endif
 
@@ -21,7 +21,7 @@ endif
 ifeq ($(COMPOSE_PROJECT_NAME),)
 $(info variable COMPOSE_PROJECT_NAME not set!)
 $(info please set variable COMPOSE_PROJECT_NAME by hand or run)
-$(info . ./import-variables-jenkins-localhost.sh for help)
+$(info . ./start-jenkins.sh for help)
 exit
 endif
 
