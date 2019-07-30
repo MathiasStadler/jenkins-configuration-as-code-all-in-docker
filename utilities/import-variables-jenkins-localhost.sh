@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o errexit -o posix -o pipefail -o nounset
 # composer project name for isolate envoiremnet
 COMPOSE_PROJECT_NAME="jenkins_of_local_docker";
 export COMPOSE_PROJECT_NAME

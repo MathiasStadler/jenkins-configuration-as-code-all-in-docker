@@ -1,5 +1,5 @@
 #!/bin/bash
-set -o errexit -o posix
+set -o errexit -o posix -o pipefail -o nounset
 
 if ! [ -d "/var/jenkins_home/.docker" ]; then
     mkdir /var/jenkins_home/.docker

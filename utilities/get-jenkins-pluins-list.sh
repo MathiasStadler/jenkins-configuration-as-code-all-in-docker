@@ -2,7 +2,7 @@
 
 # from https://technologyconversations.com/2017/06/16/automating-jenkins-docker-setup/
 
-set -o errexit -o posix -o pipefail
+set -o errexit -o posix -o pipefail -o nounset
 
 jq --version >/dev/null 2>/dev/null || { printf "jq needed, install first\n"; exit 1; }
 curl --version >/dev/null 2>/dev/null || { printf "curl needed, install first\n"; exit 1;}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -o errexit -o posix
+set -o errexit -o posix -o pipefail -o nounset
 
 if [ -z "$COMPOSE_PROJECT_NAME" ]; then
     printf "\$COMPOSE_PROJECT_NAME => NOT SET\n"

@@ -1,6 +1,5 @@
 #!/bin/bash -l
-
-set -o errexit -o posix
+set -o errexit -o posix -o unset -o pipefail
 
 # check is set
 

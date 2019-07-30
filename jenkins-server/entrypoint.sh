@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -o errexit -o posix -o unset
+set -o errexit -o posix -o nounset
 
 echo "${JAVA_ARGS}" >/tmp/java-args.txt
 
