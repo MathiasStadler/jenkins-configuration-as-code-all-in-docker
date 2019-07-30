@@ -3,6 +3,24 @@ set -o errexit -o posix -o pipefail
 
 # check is set
 
+# handle githup repository
+#!/bin/bash
+
+# from  https://serverfault.com/questions/417241/extract-repository-name-from-github-url-in-bash
+# url="git@github.com:some-user/my-repo.git"
+github_url=$(git config --get remote.origin.url)
+
+regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
+
+if [[ $github_url =~ $regex ]]; then    
+    protocol=${BASH_REMATCH[1]}
+    separator=${BASH_REMATCH[2]}
+    hostname=${BASH_REMATCH[3]}
+    user=${BASH_REMATCH[4]}
+    repository=${BASH_REMATCH[5]}
+fi
+
+
 if [ -z "$COMPOSE_PROJECT_NAME" ]; then
     printf "# Oops !!! Variable \$COMPOSE_PROJECT_NAME NOT set yet\n"
     printf "# Please set first for isolated\n"
@@ -10,6 +28,8 @@ if [ -z "$COMPOSE_PROJECT_NAME" ]; then
     if [ "$#" -ne 1 ]; then
         printf "# e.g.\n"
         printf "export COMPOSE_PROJECT_NAME=\"jenkins_on_docker\"\n"
+        printf " used the github repository name\n"
+        printf "export COMPOSE_PROJECT_NAME=\"%s\"\n" "${user}/${repository}";
     else
         printf "# please export in your shell by your self\n"
         printf "export COMPOSE_PROJECT_NAME=\"%s\"\n" "$1"
