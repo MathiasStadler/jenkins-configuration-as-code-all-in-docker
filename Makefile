@@ -9,6 +9,15 @@ $(info . ./set-variables-jenkins-localhost.sh)
 exit
 endif
 
+# 
+# check shell variables
+ifeq ($(GITHUB_REPOSITORY),)
+$(info variable GITHUB_REPOSITORY not set!)
+$(info please set variable GITHUB_REPOSITORY by hand or run)
+$(info . ./set-variables-jenkins-localhost.sh)
+exit
+endif
+
 # check shell variables
 ifeq ($(DOCKER_HOST_PORT),)
 $(info variable DOCKER_HOST_PORT not set!)
