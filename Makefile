@@ -39,28 +39,33 @@ all:
 build: build-server
 
 build-service:
+	cd $(ROOT_DIR);\
 	pushd jenkins-server; \
 	docker-compose build; \
 	popd || ( printf "command failed $$?"; exit 1; )
 	
 
 run-service:
+	cd $(ROOT_DIR);\
 	pushd jenkins-server; \
 	docker-compose up --detach; \
 	popd || ( printf "command failed $$?"; exit 1;)
 
 down-service:
+	cd $(ROOT_DIR);\
 	pushd jenkins-server; \
 	docker-compose down; \
 	popd || ( printf "command failed $$?"; exit 1;)
 
 bash-service:
+	cd $(ROOT_DIR);\
 	pushd jenkins-server; \
 	docker-compose ps -q jenkins >/tmp/jenkins-server-container-id.txt; \
 	popd || ( printf "command failed $$?"; exit 1; ) ; \
 	jenkins-server/bash-server.sh	
 
 list-service:
+	cd $(ROOT_DIR);\
 	jenkins-server/get-compose-project-name.sh; \
 	pushd jenkins-server; \
 	docker-compose ps --services; \
@@ -74,11 +79,13 @@ status-service:
 	 
 
 list-container:
+	cd $(ROOT_DIR);\
 	jenkins-server/get-compose-project-name.sh; \
 	pushd jenkins-server; \
 	docker-compose ps; \
 	popd
 
 roundtrip-develop:
+	cd $(ROOT_DIR);\
 	make down-service build-service run-service bash-service
 	
