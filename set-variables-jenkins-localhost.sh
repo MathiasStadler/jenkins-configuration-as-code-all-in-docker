@@ -5,16 +5,21 @@
 COMPOSE_PROJECT_NAME="jenkins_of_local_docker_";
 export COMPOSE_PROJECT_NAME;
 # set repository name
-github_url=$(git config --get remote.origin.url)
-regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
-if [[ $github_url =~ $regex ]]; then    
-    # protocol="${BASH_REMATCH[1]}"
-    # separator=${BASH_REMATCH[2]}
-    # hostname=${BASH_REMATCH[3]}
-    user=${BASH_REMATCH[4]}
-    repository=${BASH_REMATCH[5]}
-fi
-# GITHUB_REPOSITORY=$user/$repository;
+GITHUB_URL=$(git config --get remote.origin.url)
+
+# work only on bash
+# regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
+# if [[ $github_url =~ $regex ]]; then    
+#     # protocol="${BASH_REMATCH[1]}"
+#     # separator=${BASH_REMATCH[2]}
+#     # hostname=${BASH_REMATCH[3]}
+#     user=${BASH_REMATCH[4]}
+#     repository=${BASH_REMATCH[5]}
+# fi
+
+GITHUB_REPOSITORY_USER="$(echo "${GITHUB_URL}"|cut -d/ -f4)"
+GITHUB_REPOSITORY_NAME="$(echo "${GITHUB_URL}"|cut -d/ -f5|cut -d. -f1)"
+GITHUB_REPOSITORY=${GITHUB_REPOSITORY_USER}/${GITHUB_REPOSITORY_NAME};
 export GITHUB_REPOSITORY
 # localhost payload ip
 DOCKER_HOST_IP="$(ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q')";
