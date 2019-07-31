@@ -67,9 +67,11 @@ list-service:
 	popd
 
 status-service:
+	cd $ROOT_DIR;\
 	pushd jenkins-server; \
 	./get-compose-service-status.sh; \
-	popd; 
+	popd
+	 
 
 list-container:
 	jenkins-server/get-compose-project-name.sh; \
