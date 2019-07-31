@@ -19,6 +19,7 @@ GITHUB_URL=$(git config --get remote.origin.url)
 
 GITHUB_REPOSITORY_USER="$(echo "${GITHUB_URL}"|cut -d/ -f4)"
 GITHUB_REPOSITORY_NAME="$(echo "${GITHUB_URL}"|cut -d/ -f5|cut -d. -f1)"
+export GITHUB_REPOSITORY_NAME
 GITHUB_REPOSITORY=${GITHUB_REPOSITORY_USER}/${GITHUB_REPOSITORY_NAME};
 export GITHUB_REPOSITORY
 # localhost payload ip
