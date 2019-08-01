@@ -27,18 +27,12 @@ credentials:
               secret: "${SLACK_TOKEN}"
 jobs:
   - script: >
-      pipelineJob("foo") {
-           definition {
-                  cpsScm { 
-                      scm { 
-                        git { 
-                          github('${GITHUB_REPOSITORY}','https')
-                        } 
-                        branches('develop') 
-                        scriptPath('JENKINSFILE') 
-                        extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
-                      } 
-                    } 
-                  }
-                }
+      multibranchPipelineJob('configuration-as-code') {
+          branchSources {
+              git {
+                  id = 'configuration-as-code'
+                  remote('https://github.com/jenkinsci/configuration-as-code-plugin.git')
+              }
+          }
+      }
      
