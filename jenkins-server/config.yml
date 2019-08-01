@@ -30,14 +30,15 @@ jobs:
       pipelineJob("foo") {
            definition {
                   cpsScm { 
-                    scm { 
-                    git { 
-                      github('${GITHUB_REPOSITORY}','https')
+                      scm { 
+                        git { 
+                          github('${GITHUB_REPOSITORY}','https')
+                        } 
+                        branches('develop') 
+                        scriptPath('JENKINSFILE') 
+                        extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
+                      } 
                     } 
-                  branches('develop') 
-                  scriptPath('JENKINSFILE') 
-                  extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
-        } 
-      } 
-    
+                  }
+                }
      
