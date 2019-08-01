@@ -27,20 +27,17 @@ credentials:
               secret: "${SLACK_TOKEN}"
 jobs:
   - script: >
-      freeStyleJob('${GITHUB_REPOSITORY_NAME}') {
-          displayName('${GITHUB_REPOSITORY_NAME}')
-          description('Create Jobs/Pipeline from the JENKINSFILE')
-
-          
-
-          cpsScm { 
-            scm { 
-              git { 
-                github('${GITHUB_REPOSITORY}','https')} 
-              branches('develop') 
-              scriptPath('JENKINSFILE') 
-              extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
+      pipelineJob("foo") {
+           definition {
+                  cpsScm { 
+                    scm { 
+                    git { 
+                      github('${GITHUB_REPOSITORY}','https')
+                    } 
+                  branches('develop') 
+                  scriptPath('JENKINSFILE') 
+                  extensions { }  // required as otherwise it may try to tag the repo, which you may not want 
         } 
       } 
     
-      }
+     
