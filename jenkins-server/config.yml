@@ -30,8 +30,9 @@ jobs:
       multibranchPipelineJob('configuration-as-code') {
           branchSources {
               git {
-                  id = 'configuration-as-code'
-                  remote('https://github.com/jenkinsci/configuration-as-code-plugin.git')
+                  // id = 'configuration-as-code'
+                  // remote('https://github.com/jenkinsci/configuration-as-code-plugin.git')
+                  github('${GITHUB_REPOSITORY}','https')
               }
           }
       }
