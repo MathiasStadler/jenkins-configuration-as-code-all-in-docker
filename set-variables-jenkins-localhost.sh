@@ -34,5 +34,5 @@ DOCKER_TLS_VERIFY=1
 export DOCKER_TLS_VERIFY
 #
 # composer project name for isolate envoiremnet
-COMPOSE_PROJECT_NAME="jenkins_for_repository_${GITHUB_REPOSITORY}";
+COMPOSE_PROJECT_NAME="jenkins_for_repository_${GITHUB_REPOSITORY_USER}_${GITHUB_REPOSITORY_NAME}";
 export COMPOSE_PROJECT_NAME;
