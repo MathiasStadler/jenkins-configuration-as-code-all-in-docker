@@ -6,6 +6,7 @@ COMPOSE_PROJECT_NAME="jenkins_of_local_docker";
 export COMPOSE_PROJECT_NAME;
 # set repository name
 GITHUB_URL=$(git config --get remote.origin.url)
+export GITHUB_URL;
 
 # work only on bash
 # regex="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
