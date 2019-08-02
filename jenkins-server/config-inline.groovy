@@ -6,5 +6,11 @@ multibranchPipelineJob('configuration-as-code') {
             remote('${GITHUB_URL}')
         }
     }
+    configure {
+        it / 'triggers' << 'com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger' {
+            spec '* * * * *'
+            interval "60000"
+        }
+    }
 
 }
