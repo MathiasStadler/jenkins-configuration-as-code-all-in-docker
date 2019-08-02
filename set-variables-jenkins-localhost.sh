@@ -1,9 +1,6 @@
 #!/bin/bash
 # no set options for expand running shell
 # set -o errexit -o posix -o pipefail -o nounset
-# composer project name for isolate envoiremnet
-COMPOSE_PROJECT_NAME="jenkins_of_local_docker";
-export COMPOSE_PROJECT_NAME;
 # set repository name
 GITHUB_URL=$(git config --get remote.origin.url)
 export GITHUB_URL;
@@ -35,3 +32,7 @@ export DOCKER_HOST
 # 
 DOCKER_TLS_VERIFY=1
 export DOCKER_TLS_VERIFY
+#
+# composer project name for isolate envoiremnet
+COMPOSE_PROJECT_NAME="jenkins_for_repository_${GITHUB_REPOSITORY}";
+export COMPOSE_PROJECT_NAME;
