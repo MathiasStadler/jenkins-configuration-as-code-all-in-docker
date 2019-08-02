@@ -19,6 +19,7 @@ services:
             - DOCKER_HOST=tcp://${DOCKER_HOST_IP}:${DOCKER_HOST_PORT}
             - GITHUB_REPOSITORY=${GITHUB_REPOSITORY}
             - GITHUB_REPOSITORY_NAME=${GITHUB_REPOSITORY_NAME}
+            - GITHUB_URL=${GITHUB_URL}
 
         secrets:
             - docker-ca.pem
