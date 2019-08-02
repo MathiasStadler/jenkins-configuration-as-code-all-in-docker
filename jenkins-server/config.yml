@@ -26,6 +26,6 @@ credentials:
               id: "slack-token"
               secret: "${SLACK_TOKEN}"
 jobs:
-  - script: config-inline.groovy
+  - file: config-inline.groovy
       
      
