@@ -11,7 +11,7 @@ services:
             - jenkins.env
         volumes:
             - ./config.yml:/var/jenkins_casc.yml
-            - ./config-inline.groovy:/var/config-inline.groovy
+            - ./config-inline.groovy:/var/jenkins_home/config-inline.groovy
         ports:
             - "8080:8080"
         environment:
