@@ -76,6 +76,13 @@ status-service:
 	pushd jenkins-server; \
 	./get-compose-service-status.sh; \
 	popd
+
+check-service:
+	cd $(ROOT_DIR); \
+	pushd utilities; \
+	./check-docker-local.sh; \
+	popd
+
 	 
 
 list-container:

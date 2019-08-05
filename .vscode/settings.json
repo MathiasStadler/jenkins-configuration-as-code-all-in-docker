@@ -12,6 +12,7 @@
     "chmod",
     "chown",
     "concat",
+    "deamon",
     "elif",
     "errexit",
     "ifeq",
