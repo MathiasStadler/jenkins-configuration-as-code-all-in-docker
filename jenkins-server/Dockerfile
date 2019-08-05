@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.176.1
+FROM jenkins/jenkins:2.176.2
 
 # add docker cli inside conatainer
 user root
