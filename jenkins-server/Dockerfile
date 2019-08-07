@@ -15,8 +15,6 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     usermod -aG docker jenkins && \
     chown -R jenkins:jenkins $JENKINS_HOME/
 
-user jenkins
-
 # skip the setup wizard
 # ENV JAVA_ARGS -Djenkins.install.runSetupWizard=false -Dpermissive-script-security.enabled=true
 # ENV JAVA_ARGS -Djenkins.install.runSetupWizard=false
@@ -42,5 +40,3 @@ COPY local.groovy /usr/share/jenkins/ref/init.groovy.d/
 # RUN ["chmod", "+x", "/setup-tls-docker.sh"]
 
 ENTRYPOINT ["bash","+x","/entrypoint.sh"]
-
-USER jenkins
