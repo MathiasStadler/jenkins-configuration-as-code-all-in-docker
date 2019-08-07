@@ -2,9 +2,9 @@
 set -o errexit -o posix -o nounset
 
 # change ${JENKINS_HOME} permission
-bash +x /jenkins-home-change-permission.sh
+# TODO disable bash +x /jenkins-home-change-permission.sh
 # su jenkins
-su - jenkins
+# TODO disable su - jenkins
 # setup tls for user jenkins
 bash +x /setup-tls-docker.sh
 # start jenkins 
