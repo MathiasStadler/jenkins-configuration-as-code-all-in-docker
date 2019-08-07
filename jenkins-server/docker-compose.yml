@@ -13,7 +13,7 @@ services:
             - ./config.yml:/var/jenkins_casc.yml
             - ./config-inline.groovy:/config-inline.groovy
             - ./config-inline-docker-cloud.groovy:/config-inline-docker-cloud.groovy
-            - ./add-docker-cloud.groovy:/var/jenkins_home/workspace/add-docker-cloud.groovy
+            # - ./add-docker-cloud.groovy:/var/jenkins_home/workspace/add-docker-cloud.groovy
 
         ports:
             - "8080:8080"
