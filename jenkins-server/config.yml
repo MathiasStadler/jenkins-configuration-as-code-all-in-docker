@@ -27,5 +27,6 @@ credentials:
               secret: "${SLACK_TOKEN}"
 jobs:
   - file: "/config-inline.groovy"
+  - file: "/config-docker-cloud.groovy"
       
      

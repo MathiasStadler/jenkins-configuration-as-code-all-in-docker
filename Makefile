@@ -44,7 +44,6 @@ build-service:
 	docker-compose build; \
 	popd || ( printf "command failed $$?"; exit 1; )
 	
-
 run-service:
 	cd $(ROOT_DIR);\
 	pushd jenkins-server; \
@@ -82,8 +81,6 @@ check-service:
 	pushd utilities; \
 	./check-docker-local.sh; \
 	popd
-
-	 
 
 list-container:
 	cd $(ROOT_DIR);\
