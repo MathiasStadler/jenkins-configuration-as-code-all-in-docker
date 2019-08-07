@@ -94,3 +94,4 @@ workflow-multibranch:2.21
 workflow-scm-step:2.9
 workflow-step-api:2.20
 workflow-support:3.3
+security-inspector:0.5
