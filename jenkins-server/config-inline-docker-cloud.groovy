@@ -6,7 +6,7 @@ job('init-add-docker-cloud') {
     //}
     steps {
 
-        echo "Hallo World"
+        printf "Hallo World\n"
     }
 
 
