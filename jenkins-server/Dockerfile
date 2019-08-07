@@ -29,6 +29,7 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 RUN for f in /usr/share/jenkins/ref/plugins/*.jpi; do mv $f $f.override ; done
 
 COPY setup-tls-docker.sh /setup-tls-docker.sh
+COPY jenkins-home-change-permission.sh /jenkins-home-change-permission.sh
 
 COPY entrypoint.sh /entrypoint.sh
 
