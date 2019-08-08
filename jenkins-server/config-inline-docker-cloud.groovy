@@ -7,7 +7,7 @@ job('init-add-docker-cloud') {
     steps {
 
         printf "Hallo World\n"
-        println("script directory: ${new File('.').parent.absolutePath}")
+        println("script directory: ${new File(".").absolutePath}")
     }
 
 
