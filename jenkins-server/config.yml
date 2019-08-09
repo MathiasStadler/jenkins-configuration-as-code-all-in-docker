@@ -51,6 +51,13 @@ credentials:
               scope: GLOBAL
               id: "slack-token"
               secret: "${SLACK_TOKEN}"
+          - certificate:
+            scope: SYSTEM
+            id:       ssh_private_key
+            password: ${SSH_KEY_PASSWORD}
+            keyStoreSource:
+              fileOnMaster:
+                keyStoreFile: /docker/secret/id_rsa 
           - dockerServer:
               clientCertificate: |-
                 -----BEGIN CERTIFICATE-----
