@@ -25,7 +25,7 @@ credentials:
               scope: GLOBAL
               id: "slack-token"
               secret: "${SLACK_TOKEN}"
-           - dockerServer:
+          - dockerServer:
               clientCertificate: |-
                 -----BEGIN CERTIFICATE-----
                 MIIFAzCCAuugAwIBAgIUJJ4c6ULU5iUW+isMG6ESjgJcsEEwDQYJKoZIhvcNAQEL
