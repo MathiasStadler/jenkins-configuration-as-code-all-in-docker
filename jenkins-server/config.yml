@@ -1,17 +1,5 @@
 jenkins:
-  numExecutors: 1
-  crumbIssuer:
-    standard:
-      excludeClientIPFromCrumb: false
-  remotingSecurity:
-    enabled: false
-unclassified:
-  location:
-    url: "${JENKINS_HOST}"
-security:
-  globalJobDslSecurityConfiguration:
-    useScriptSecurity: false
-clouds:
+  clouds:
   - docker:
       containerCap: 4
       dockerApi:
@@ -27,6 +15,19 @@ clouds:
           tty: true
         instanceCapStr: "4"
         labelString: "docker.local.jenkins.slave"
+  numExecutors: 1
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  remotingSecurity:
+    enabled: false
+unclassified:
+  location:
+    url: "${JENKINS_HOST}"
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+
 credentials:
   system:
     domainCredentials:
