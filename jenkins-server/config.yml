@@ -82,58 +82,7 @@ credentials:
                 li1wlDqgri3M5f0cBKK0LUTGECyNW0e6CnY6g7ur+BNQIAznl9Y8x2sJcRwgYxDy
                 FzDyCBtdpebbXAAbXZ2Wz5lwc0r5VIWRsXCrgt4Nwz41UkSofzGg
                 -----END CERTIFICATE-----
-              clientKeySecret: |-
-                -----BEGIN RSA PRIVATE KEY-----
-                MIIJKAIBAAKCAgEAr0C9J4+yJai77fbawMaXWcyR+rOTNOiiWvC2ShMlH/tksN9L
-                1j4WfqWSo6IpRlsIJNTE4Lzv7ZdnaTRM3tqamY9o50GjrAhTdxpYqUhlZFUO8z/0
-                Jhdh3GeRJLFBF+XWHTEpH0oIDKIAyQHYg+3uzKIv5idQu0xn6uKIlyY0EOKPLynf
-                SXBQHRdQy4yfAriUxbLPw2ELBw0ipOKPfE+XBdDSozKfS6wahzzzEeMCQJLOHqX/
-                4AlyY2foVOS+18y4AVSs1rqqEthUy0uBRV84NnKrHz0gqe6JLGHsxCUfMsCgrLS+
-                XXw8EZSBvr7InDWeUuRB7sNMFwEVUABKcboxkaXnsHjD2P1QBQME0MD4RMbX3Sog
-                Qz7IDRrTHSE2/5RcDxPApwHzWPnTiEszyNInZMMzYpiuAUDF0JbwoxqwhZ7+km95
-                OkUABtnacFBbtf/3MXOLiZIIyKbhVFENC2KM0Jzuhn/zViSbVwcC6oi9RyUQMvbE
-                6pVRQPGozBs78z9MJCdkuGmP7enISFAIqVdXATn9QBSUaIOOrZbcU2pj2ouc7oRA
-                J+5hx5sNgzXRNJoOXKCHo3SNRKwzkzclUNc8yAmo/xzdhvMjD8fLavpfTCwAPke/
-                JSs+U2doO3FAMhZaldh3yHNJXmSqvMcYeN1wT3DC1+kqZ9M/+vwltJrMC50CAwEA
-                AQKCAgBW6I/lMolxy3+Gvsg0mUctLRmnba4uqr74wi5kBaJ/fbetTs7Y6+lT3OAf
-                badyUGp1eV445PlGpbKOpXUJfvbz9/5Z0F9OTMK3acVWDaTaYKQNVUXKLgZFusZr
-                n8tcAopv55UxAxGC0kP5aoTox/GIYVXHmO+cMoPGI5kA+90OEoxXIzirvpq8Enfq
-                uU2Rl9+POuF1ToaddJIdmoz1ZLLMG4aZj90XNb3iGwOfdygCxcqZwFBn1cd4LGs2
-                zkkl00vcvRUJV4BH4CgMuODeeh3yQmNCFppAKx6zd8xmaNJT5NrJSsisq5NOVIsT
-                AKGTdbOR/8gCk68EKXFcPwir5V32vgwSoK/Bsy6Y/By+xf6nwN1Xl2YivMVnNde5
-                y4OePbi8mddhVwxlO7sQ9XJ/rsGk7ePUxSBT4Yuon6FQpJjA63yfZ3WgetmScu8G
-                8aTdqsR+POtoXnbZm+e2rozvLb0FdmyjZ0oD14Jucrw//k7Sgdxkber1/VInAeVf
-                7k7S3oyyxxI32Nr+7NDxuGCpfpjxCzBBS4/nY1Z7jjj4jqIiW2d2EuP1vHl4wOuH
-                8nMNuEg5noz7xRigp6RLuOBoiAoqx1IqGKbeBui+bI4gn3+w+9YzTx8l8apQctkC
-                p+5qrGezYbw6QNYZRocI3FT/EOwZrB1jKw1panqI9eYyLEJ0MQKCAQEA4Qpre5vd
-                3XLIQCfzCtnKGfAnWpcPaEWDPdTJ3kMzB2ZT0D0CbZwhJWxwOC8CsjneylPTecDC
-                wtyb3ry9V/RJJEhYF9r5d1Rue22780SqbbndtQF8NbVN4ErjNSsfQr7x7rhCxT+G
-                nOTuup+0QCxxghWJwIl5gj9FCKgGmQhbMITxtlbgBGKnoevwoSQn2WmmyjG3BjdB
-                ps9Q+8rrcjLtNSsFFQM7txGEZdtcEonAE5xKM6Zq9IprbUQhfEpjhAbjcxUlb+9p
-                mR07CgZ6cFEUZjGBV/sVa/bxSTBebqFFgRXHJsdRuJ0mQO8n8/yH0k9wFQyDrkTB
-                YAGYZtZhBsZ7EwKCAQEAx1zeza/SxX9wCMvURN6BO5hGlSuLeCy+RDiV+CRWq3em
-                oyv2o0sNzCU0vgPh/8ePHPGPfcmp+zh+Y990aZbLDLzif4fB0tpXpedphw9Mu2cx
-                Y8i+CoG7eIheeFRACiglSyqv1TBuMNwDHjUgVX5FIxELf2XaDk+8jD3Jm2rhdbeX
-                HEphTa5lELEYDwkKPboPwy+Jd5cSOxEZ9h7+3OpvxHScIKxcSRcQ/0i0n42nKcwz
-                VDhiW32WuyGT+DMbIjnvakUyKI8I67FJDrVNcVHMTbz5c9OmQMX+/FYBHFKXjZf9
-                SFy3Z/ZXG1FXnDVHS+IeyBMX463gvYH5N9VL7xsEjwKCAQBQpyteYb5iX4DlfWvd
-                t7B3G1r/XKRo+oDO6DRxNCRVwpbHSxZTsmEuyG5vtGmC9rqiSOjB+hPTQr2aVoqF
-                u0d7eXIZGqHN4rS2B94UkceDC9opxR5/ITuH508G/y10/no21FMZ3mqgUGw+9n3j
-                ggosVQvJtXuW8pYLRC0ZK6WC/iKi9v/SkokBv02+cvbVNMhSLv8peyRMZIDhvRgl
-                FZtuMrzfiwkb02tgFf4pprTwUlNFr58lhXZ68rANm5uO9ekOlcWVGHkAJznBnhDD
-                sEtfVN7GaXaD+zz+vhcaDzKZ0PRPMaBYSfory4rGJvuGpHHHGXUYQAwOHIRCVxLv
-                GrOBAoIBAEPL+lz6cPQG7YOgRXSSMmKg20f5QfnBRYcPszhqqyquivWsirhnWq7U
-                7EW+Lkn8hFe0cja1sN+lC55NLFqIFE8loOT7ttdMt0fNFZ7/ffmxEyO67Z3HFojb
-                3zyOciTCGESipJ8cVCy7dTf9mxxXz40oS7+sVGZPiXArxvbadwfAQlw1kzeGmgn+
-                H49lZJ0vPBMFhHst3d5GZ4zCZ6ua8h1eBoY59zxH4tjd0cb8th9JuR7n+dLhN7Q1
-                rAtY3d5a02dRVshiNAdrB8w/rbFevtqk7DQOgtg+PQN0//WwxKc7S8Ai/6AULvU0
-                SVXu7GsK36rsi1A7HlVz8Nui5qrOhlMCggEBALgHik7af5cwwQB3zprcR8tX1s7z
-                Vr5sB064q2XX2IIbzyrl33aV/XFdwdcjHnSR8YRODCQe1IqULIuLBVvJb2DGIMrV
-                C/5DnE97lZR68HWhNLVOyzY8yr6ppQHI77B6ronxlpnqFhKaV3vPsIAo6u7ICz0c
-                Fg1Do5PlRqK5aB0uSk6gS6jUCu9h2W66P7lIbZllJFFgJ5eKEEhFYx/8l0v6JysQ
-                xsjsMU1vOkckqKIMV10VWEpkUEeW6oo6baVodntNeyF3AAen/xLEy3a5wPBgdigv
-                /Wsy6dfmHcYqWsgE5V1JLVGc1lDZ8q1/fqTpO68KQZC/gLcXeUmRaeidoro=
-                -----END RSA PRIVATE KEY-----
+              clientKeySecret: $(cat ${JENKINS_HOME}/.docker/key.pem) 
               description: "docker"
               id: "aab15265-4f0a-46a0-8e97-66695bd3d312"
               scope: GLOBAL
