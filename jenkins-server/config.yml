@@ -1,20 +1,28 @@
 jenkins:
+  
   clouds:
-  - docker:
-      containerCap: 4
-      dockerApi:
-        connectTimeout: 3
-        dockerHost:
-          credentialsId: "aab15265-4f0a-46a0-8e97-66695bd3d312"
-          uri: "tcp://192.168.178.41:2376"
-        readTimeout: 60
-      name: "docker.local"
-      templates:
-      - dockerTemplateBase:
-          image: "jenkinsci/slave:latest"
-          tty: true
-        instanceCapStr: "4"
-        labelString: "docker.local.jenkins.slave"
+    - docker:
+        name: "docker"
+        dockerApi:
+          dockerHost:
+            credentialsId: "aab15265-4f0a-46a0-8e97-66695bd3d312"
+            uri: "tcp://192.168.178.41:2376"
+            readTimeout: 60
+        templates:
+          - labelString: "docker-agent"
+            dockerTemplateBase:
+              image: "jenkins/slave"
+              volumes:
+                - hello:/hello
+                - world:/world
+              environmentsString: |
+                hello=world
+                foo=bar
+            remoteFs: "/home/jenkins/agent"
+            connector:
+              attach:
+                user: "jenkins"
+                instanceCapStr: "10"     
   numExecutors: 1
   crumbIssuer:
     standard:
