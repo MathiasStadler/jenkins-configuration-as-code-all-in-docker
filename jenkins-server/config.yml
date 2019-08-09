@@ -22,7 +22,7 @@ jenkins:
             connector:
               attach:
                 user: "jenkins"
-                instanceCapStr: "10"     
+            instanceCapStr: "10"     
   numExecutors: 1
   crumbIssuer:
     standard:
