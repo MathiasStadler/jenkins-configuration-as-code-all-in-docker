@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.6'
 services:
     jenkins:
         build: 
@@ -16,6 +16,7 @@ services:
         ports:
             - "8080:8080"
         environment:
+            - CASC_VAULT_FILE="/run/secrets/jcasc_vault"
             - DOCKER_HOST_IP="${DOCKER_HOST_IP}"
             - DOCKER_HOST_PORT=${DOCKER_HOST_PORT}"
             - DOCKER_HOST=tcp://${DOCKER_HOST_IP}:${DOCKER_HOST_PORT}
@@ -24,6 +25,7 @@ services:
             - GITHUB_URL=${GITHUB_URL}
 
         secrets:
+            - jcasc_vault
             - docker-ca.pem
             - docker-cert.pem
             - docker-key.pem
@@ -36,3 +38,5 @@ secrets:
     file: "~/.docker/cert.pem"
   docker-key.pem:
     file: "~/.docker/key.pem"
+  jcasc_vault:
+    file: ./secrets/jcasc_vault

@@ -16,6 +16,7 @@
     "elif",
     "errexit",
     "ifeq",
+    "jcasc",
     "jenkinsfile",
     "lastword",
     "mkdir",
